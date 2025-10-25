@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Музыкальный плеер"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Кнопки выбора источника -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnSelectFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Файл"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnLoadUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="URL"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="История"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Поле для URL -->
+    <LinearLayout
+        android:id="@+id/urlInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Введите URL аудио"
+            android:inputType="textUri" />
+
+        <Button
+            android:id="@+id/btnLoadFromUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Загрузить" />
+
+    </LinearLayout>
+
+    <!-- Информация о треке -->
+    <TextView
+        android:id="@+id/tvTrackInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Трек не выбран"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:background="#f0f0f0" />
+
+    <!-- Элементы управления -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="▶"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="⏸"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="⏹"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <!-- Прогресс -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Статус -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статус: Остановлен"
+        android:gravity="center"
+        android:textSize="14sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="tip_calculator">Калькулятор чаевых</string>
+    <string name="dish_calculator">Калькулятор блюд</string>
+    <string name="total_amount">Общая сумма</string>
+    <string name="tip_percentage">Процент чаевых</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="total_with_tip">Итого с чаевыми</string>
+    <string name="tip_amount">Сумма чаевых</string>
+    <string name="add_dish">Добавить блюдо</string>
+    <string name="dish_name">Название блюда</string>
+    <string name="price">Цена</string>
+    <string name="quantity">Количество</string>
+    <string name="subtotal">Промежуточный итог</string>
+    <string name="transfer_to_main">Передать на главный экран</string>
+    <string name="enter_total_amount">Введите общую сумму</string>
+    <string name="enter_tip_percentage">Введите процент чаевых</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tipCalculatorFragment">
+
+    <fragment
+        android:id="@+id/tipCalculatorFragment"
+        android:name="com.example.tipcalculator.TipCalculatorFragment"
+        android:label="TipCalculatorFragment"
+        tools:layout="@layout/fragment_tip_calculator">
+        <action
+            android:id="@+id/action_tipCalculatorFragment_to_dishCalculatorFragment"
+            app:destination="@id/dishCalculatorFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dishCalculatorFragment"
+        android:name="com.example.tipcalculator.DishCalculatorFragment"
+        android:label="DishCalculatorFragment"
+        tools:layout="@layout/fragment_dish_calculator">
+        <action
+            android:id="@+id/action_dishCalculatorFragment_to_tipCalculatorFragment"
+            app:destination="@id/tipCalculatorFragment" />
+    </fragment>
+
+</navigation>
